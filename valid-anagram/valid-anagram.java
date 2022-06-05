@@ -15,13 +15,13 @@ class Solution {
                 map.put(t.charAt(j),map.get(t.charAt(j))-1);
             }else{
                 map.put(t.charAt(j),1);
-                System.out.println(t.charAt(j));
+                //System.out.println(t.charAt(j));
             }
         }
         int result=0;
         for(Map.Entry<Character, Integer> mapElement: map.entrySet()){
             result=mapElement.getValue();
-            System.out.println(result);
+            //System.out.println(result);
             if(result>0){
                 return false;
             }
