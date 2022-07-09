@@ -29,10 +29,6 @@ class Solution {
         for(int j=1;j<nums.length;j++){
             sumLeft=sumLeft+nums[j-1];
             sumRight=sum-sumLeft-nums[j];
-            
-            //System.out.println(j+"-"+nums[j]);
-            //System.out.println("sum "+sumRight);
-            //System.out.println("sumLeft "+sumLeft);
             if(sumRight==sumLeft){
                 return j;
             }
