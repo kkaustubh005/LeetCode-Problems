@@ -2,12 +2,7 @@ class Solution {
     public int maxConsecutiveAnswers(String answerKey, int k) {
         char[] key = answerKey.toCharArray();
         int len = answerKey.length();
-        int start=0;
-        int end=0;
-        int tCount=0;
-        int fCount=0;
-        int maxCount=0;
-        int maxLength=0;
+        int start=0, end=0, tCount=0, fCount=0, maxCount=0, maxLength=0;
         
         for(end=0;end<len;end++){
             if(key[end]=='T'){
