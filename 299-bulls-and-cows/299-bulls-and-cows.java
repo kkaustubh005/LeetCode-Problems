@@ -36,29 +36,17 @@ class Solution {
                 }
             }
         }
-        // if(gMap.equals(sMap)){
-        //     unMatchedCount=gMap.size();
-        // }else{
             for(char x: sMap.keySet()){
                 if(gMap.containsKey(x)){
                     int min=Math.min(sMap.get(x),gMap.get(x));
                     unMatchedCount=unMatchedCount+min;
                 }
             }
-        //}
-        System.out.println(equalCount);
-        System.out.println(unMatchedCount);
-        // String[] strArray = new String[4];
-         String bull=Integer.toString(equalCount);
-        // strArray[0]=bull;
-         char a='A';
-        // strArray[1]=String.valueOf(a);
-         String cow=Integer.toString(unMatchedCount);
-        // strArray[2]=cow;
-         char b='B';
-        // strArray[3]=String.valueOf(b);
-        // //strArray[3]='B';
-        // String str = strArray.toString();
+        
+        String bull=Integer.toString(equalCount);
+        char a='A';
+        String cow=Integer.toString(unMatchedCount);
+        char b='B';
         StringBuilder str = new StringBuilder(4);
         str.append(bull);
         str.append("A");
