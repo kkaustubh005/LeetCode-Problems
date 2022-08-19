@@ -32,7 +32,7 @@ class Solution {
             if(sumRight==sumLeft){
                 return j;
             }
-            sumRight=sum;
+            //sumRight=sum;
             
         }
         return -1;
