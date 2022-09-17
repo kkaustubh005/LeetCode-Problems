@@ -16,7 +16,7 @@ class Solution {
         }
         System.out.println("Left:"+left);
         System.out.println("Right:"+right);
-        if(nums[left]<target) return left+1;
-        else return left;
+        if(nums[left]<target) return right+1;
+        else return right;
     }
 }
