@@ -13,11 +13,11 @@ class Solution {
         ListNode dummy = new ListNode(0);
         ListNode ptr=head;
         ListNode ptr2=dummy;
+        
         if(head == null) return null;
         ptr2.next=ptr.next;
         ptr2=ptr2.next;
-        ListNode evenHead=ptr2;
-        
+        ListNode evenHead=ptr2;      
         while(ptr2!=null && ptr2.next!=null){
             ptr.next=ptr.next.next;
             ptr=ptr.next;
