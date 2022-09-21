@@ -69,9 +69,6 @@ class Solution {
            result[count] = res;
             ++count;
         }
-        return result;
-        
-        
-        
+        return result;      
     }
 }
