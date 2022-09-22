@@ -1,6 +1,6 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        if(s.length()==1) return 1;
+        //if(s.length()==1) return 1;
         int count=0;
         int maxCount=0;
         char[] sArray=s.toCharArray();
