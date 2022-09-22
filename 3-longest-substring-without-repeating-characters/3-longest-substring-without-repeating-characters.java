@@ -1,11 +1,11 @@
-class Solution {
+class Solution { //Slidingwindow
     public int lengthOfLongestSubstring(String s) {
-        //if(s.length()==1) return 1;
         int count=0;
         int maxCount=0;
         char[] sArray=s.toCharArray();
+        HashSet<Character> set=new HashSet<>();
         for(int i=0;i<sArray.length;i++){
-            HashSet<Character> set=new HashSet<>();
+            set.clear();
             for(int j=i;j<sArray.length;j++){
                 if(set.contains(sArray[j])){
                     if(count>maxCount) maxCount=count;
