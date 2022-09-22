@@ -3,9 +3,10 @@ class Solution { //Slidingwindow
         int count=0;
         int maxCount=0;
         char[] sArray=s.toCharArray();
-        HashSet<Character> set=new HashSet<>();
+       // HashSet<Character> set=new HashSet<>();
         for(int i=0;i<sArray.length;i++){
-            set.clear();
+            //set.clear();
+            HashSet<Character> set=new HashSet<>();
             for(int j=i;j<sArray.length;j++){
                 if(set.contains(sArray[j])){
                     if(count>maxCount) maxCount=count;
