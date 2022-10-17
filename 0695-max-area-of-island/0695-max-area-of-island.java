@@ -22,13 +22,14 @@ class Solution {
             return count;
         }
         
-        ++count;
-        grid[row][col]=0;
+        ++count;   
+        grid[row][col]=0;  //mark visited elements as 0
         
         count+=dfs(grid,row+1,col);
         count+=dfs(grid,row,col+1);
         count+=dfs(grid,row-1,col);
         count+=dfs(grid,row,col-1);
+        
         return count;
     }
 }
