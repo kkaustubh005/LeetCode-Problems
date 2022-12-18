@@ -5,7 +5,6 @@ class Solution {
         int mid=0;
         int indexS=0; int indexL=0;
         int temp=0;
-        //int mid= left + (right-left) /2;
         while(left<=right) {
             mid = left + (right-left) / 2;
             if(nums[mid]==target) {
@@ -28,9 +27,6 @@ class Solution {
             else
                 right=mid-1;
         }
-        // if(indexS!=0 && indexL!=0)
-        //     return new int[] {indexS,indexL};
-        // else
         return new int[] {-1,-1};
     }
 }
