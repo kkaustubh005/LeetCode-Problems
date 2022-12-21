@@ -1,12 +1,7 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        //HashMap<Integer, Integer> map = new HashMap<>();
-        //List<List<Integer> > aList = new ArrayList<>();
         Set<List<Integer>> set = new HashSet<>();
         Arrays.sort(nums);
-        // for(int i=0;i<nums.length;i++){
-        //     map.put(nums[i],i);
-        // }
         
         for(int i=0;i<nums.length;i++){
             int j = i+1;
