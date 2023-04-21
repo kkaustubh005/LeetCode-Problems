@@ -4,19 +4,18 @@ class Solution {
         char[] mag = magazine.toCharArray();
         char[] ran = ransomNote.toCharArray();
         
-        for(char a: mag){
+        if(mag.length<ran.length)
+            return false;
+        
+        for(char a: mag)
             map.put(a, map.getOrDefault(a,0)+1);
-        }
         
         for(char b: ran){
-            if(map.containsKey(b) && map.get(b)<1){
+            if(!map.containsKey(b) || map.get(b)<1)
                 return false;
-            } else if(map.containsKey(b))
-                map.put(b,map.get(b)-1);
-            else 
-                return false;
-            
+            map.put(b,map.get(b)-1); 
         }
+        
         return true;
     }
 }
