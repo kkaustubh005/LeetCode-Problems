@@ -3,11 +3,13 @@ class Solution {
         int product=1;
         int zeroCount=0;
         ArrayList<Integer> zeroListIndex = new ArrayList<>();
+        int zeroIndex=0;
         
         for(int i=0;i<nums.length;i++){
             if(nums[i]!=0)
                 product=product*nums[i];
             else{
+                zeroIndex=i;
                 zeroListIndex.add(i);
                 ++zeroCount;
             }        
@@ -24,8 +26,10 @@ class Solution {
         }else{
             for(int k=0;k<result.length;k++)
                 result[k]=0;
-            for(int l:zeroListIndex)
-                result[l]=product;
+            //for(int l:zeroListIndex)
+             //   result[l]=product;
+            result[zeroIndex]=product;
+            
         }
             
         return result;
