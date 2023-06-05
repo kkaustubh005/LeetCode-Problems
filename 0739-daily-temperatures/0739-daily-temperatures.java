@@ -1,12 +1,13 @@
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         int [] result = new int[temperatures.length];
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
+        //Stack<Integer> stack = new Stack<>();
         
         for(int curDay=0;curDay<temperatures.length;curDay++){
             int currentTemp=temperatures[curDay];
             
-            while(!stack.empty() && temperatures[stack.peek()]<currentTemp){
+            while(!stack.isEmpty() && temperatures[stack.peek()]<currentTemp){
                 int prevDay=stack.pop();
                 result[prevDay]=curDay-prevDay;
             }
