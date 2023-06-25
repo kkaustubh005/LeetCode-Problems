@@ -41,8 +41,8 @@ class Solution {
             }
             chars[counter++]=chars[i];
             if(count!=1){
-                char[] x = Integer.toString(count).toCharArray();
-                for(char a:x)
+                // char[] x = Integer.toString(count).toCharArray();
+                for(char a:Integer.toString(count).toCharArray())
                    chars[counter++]=a;          
             }
             count=0;
