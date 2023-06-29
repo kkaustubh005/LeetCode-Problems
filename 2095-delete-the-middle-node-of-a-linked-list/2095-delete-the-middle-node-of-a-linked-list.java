@@ -19,20 +19,20 @@ class Solution {
         if(count==1)
             return null;
         if(count%2==0){
-            int endPoint=(count/2)+1;
+            int endPoint=count/2;
             int n=1;
             ptr = head;
-            while(n!=endPoint-1){
+            while(n!=endPoint){
                 ptr=ptr.next;
                 ++n;
             }
             ptr.next=ptr.next.next;
             return head;
         }else{
-            int endPoint=(count+1)/2;
+            int endPoint=count/2;
             int n=1;
             ptr = head;
-            while(n!=endPoint-1){
+            while(n!=endPoint){
                 ptr=ptr.next;
                 ++n;
             }
