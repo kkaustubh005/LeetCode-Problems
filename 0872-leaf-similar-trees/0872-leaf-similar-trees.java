@@ -14,18 +14,18 @@
  * }
  */
 class Solution {
-    private void inorder(TreeNode root, List<Integer> list){
+    private void preorder(TreeNode root, List<Integer> list){ //Top-down approach (preorder)
         if(root==null) return;
-        if(root.left==null && root.right==null)
+        if(root.left==null && root.right==null) //check leaf node
             list.add(root.val);
-        inorder(root.left, list);
-        inorder(root.right, list);
+        preorder(root.left, list);
+        preorder(root.right, list);
     }
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
-        inorder(root1, list1);
-        inorder(root2, list2);
+        preorder(root1, list1);
+        preorder(root2, list2);
         
         return list1.equals(list2);
     }
