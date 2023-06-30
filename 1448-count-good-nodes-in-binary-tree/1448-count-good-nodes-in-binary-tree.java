@@ -23,8 +23,8 @@ class Solution {
             ++count;
             max=root.val;
         }
-        if(root.left==null && root.right==null)
-            max=initial;
+        // if(root.left==null && root.right==null)
+        //     max=initial;
         preorder(root.left,max,root.val);
         preorder(root.right,max,root.val);
         
