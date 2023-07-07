@@ -16,7 +16,7 @@ class Solution {
         }
         return true;*/
         //Alternate approach- Using Stack
-        s=s.toLowerCase();
+      /*  s=s.toLowerCase();
         s=s.replaceAll("[^a-z0-9]","");
         Deque<Character> stack = new ArrayDeque<>();
         for(int i=0;i<s.length();i++){
@@ -29,7 +29,15 @@ class Solution {
         if(s.equals(sb.toString()))
             return true;
         else
-            return false;
+            return false;*/
+        
+        //Alternate approach using StringBuilder
+        
+        s=s.replaceAll("[^A-Za-z0-9]", "");
+        s=s.toLowerCase();
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        return s.equals(sb.toString());
         
     }
 }
