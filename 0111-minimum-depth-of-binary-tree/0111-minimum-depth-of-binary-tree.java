@@ -17,17 +17,17 @@ class Solution {
     int min = Integer.MAX_VALUE;
     public void traversal(TreeNode root, int depth) {
         if(root==null) return;
-        ++depth;
         if(root.left==null && root.right==null) {
             if(depth<min)
                 min=depth;
         }
-        traversal(root.left,depth);
-        traversal(root.right,depth);
+        traversal(root.left,depth+1);
+        traversal(root.right,depth+1);
     }
     public int minDepth(TreeNode root) {
         if(root==null) return 0;
-        traversal(root,0);
+        traversal(root,1);
         return min;
     }
 }
+//For BFS traversal, look at the solution of Leetcode
