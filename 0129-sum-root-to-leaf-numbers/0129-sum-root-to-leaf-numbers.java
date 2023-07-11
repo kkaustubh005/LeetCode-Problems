@@ -14,7 +14,6 @@
  * }
  */
 class Solution {
-    int sum=0;
     int result=0;
     void preorder(TreeNode root, int sum) {
         if(root==null) return;
@@ -25,7 +24,7 @@ class Solution {
         preorder(root.right,sum);
     }
     public int sumNumbers(TreeNode root) {
-        preorder(root,sum);
+        preorder(root,0);
         return result;
     }
 }
