@@ -15,7 +15,6 @@
  */
 class Solution {
     Boolean flag=false;
-    private int sum=0;
     private void preorder(TreeNode root, int sum){
         if(root==null) return;
         if(root.left==null && root.right==null && sum-root.val==0) 
