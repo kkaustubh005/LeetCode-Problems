@@ -17,14 +17,14 @@ class Solution {
     private int count=0;
     private int max;
     private void preorder(TreeNode root,int max){
-        if(root==null) return;
+        if(root==null) 
+            return;
         if(root.val>=max){
             ++count;
             max=root.val;
         }
         preorder(root.left,max);
-        preorder(root.right,max);
-        
+        preorder(root.right,max);        
     }
     public int goodNodes(TreeNode root) {
         preorder(root,root.val);
