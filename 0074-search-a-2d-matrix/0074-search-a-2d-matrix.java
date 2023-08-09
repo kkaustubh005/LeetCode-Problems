@@ -1,6 +1,5 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        int startRow=0;
         int endRow=matrix.length-1;
         int finalRow=0;
         while(endRow>0) {    //Find row
@@ -9,11 +8,8 @@ class Solution {
             else if(target>matrix[endRow][0]){
                 finalRow=endRow;
                 break;
-            }else if(matrix[endRow][0]>target && target>=matrix[endRow-1][0]) {
-                finalRow=endRow-1;
-                break;
-            } else
-                --endRow;
+            }
+            --endRow;
         }
         //Binary search on the row
         int start=0;
