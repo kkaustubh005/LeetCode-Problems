@@ -32,9 +32,6 @@ class Solution {
         if(!dfs(r-1,c,grid,visit))
             isClosed=false;
         
-        /*if(!dfs(r,c+1,grid,visit) || !dfs(r+1,c,grid,visit) || !dfs(r,c-1,grid,visit) || !dfs(r-1,c,grid,visit))
-            isClosed=false;*/
-        
         return isClosed;
     }
 }
