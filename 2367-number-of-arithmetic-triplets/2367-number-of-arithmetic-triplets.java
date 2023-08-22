@@ -10,8 +10,7 @@ class Solution {
                 
                 while(nums[k]-nums[j]>diff && k>j) 
                     --k;
-                 //System.out.println(nums[j]-nums[i]);
-                //System.out.println(nums[k]-nums[j]);
+                 
                 if(nums[j]-nums[i]==diff && nums[k]-nums[j]==diff)
                     ++count; 
                 
