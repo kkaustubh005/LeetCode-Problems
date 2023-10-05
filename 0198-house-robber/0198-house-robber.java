@@ -1,3 +1,17 @@
+class Solution { //Iterative Bottom-up
+    public int rob(int[] nums) {
+        int dp0=0;
+        int dp1=0;
+        for(int i=0; i<nums.length; i++){
+            nums[i]=Math.max(dp0+nums[i], dp1);
+            dp0=dp1;
+            dp1=nums[i];
+        }
+        return nums[nums.length-1];
+    }
+}
+
+/*
 class Solution {  //DP, top-down approach (memoization)
     HashMap<Integer, Integer> memo = new HashMap<>();
     private int[] nums;
